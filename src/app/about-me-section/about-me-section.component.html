@@ -1,0 +1,21 @@
+<ps-header [show]="!!section" [label]="section?.label" [id]="section?.anchor"></ps-header>
+<div class="row" *ngIf="section">
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+        <div class="col mb-3">
+            <img [src]="section.image.url" class="img-fluid profile-image" [alt]="section.image.alt" [style]="section.image.style">
+        </div>
+        <div class="col">
+            <div *ngFor="let socialMedia of section.socialMedia" [style]="section.socialMediaStyle">
+                <a [href]="socialMedia.link">
+                    <img [src]="socialMedia.icon" class="img-fluid" [alt]="socialMedia.name"
+                        [style]="socialMedia.style">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <p>{{section.description}}</p>
+    </div>
+    <div class="col-md-1"></div>
+</div>
