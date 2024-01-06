@@ -62,7 +62,7 @@ export class AppComponent implements OnInit {
         Object.keys(this.configuration.sections).forEach(key => {
           const section = this.configuration.sections[key];
           const type = this.toType(section);
-          if (type) this.components.push({ type: type, inputs: {section : section} });
+          if (type) this.components.push({ type: type, inputs: { section: section } });
           this.items.push({
             show: !!section,
             label: section?.label,
@@ -81,14 +81,12 @@ export class AppComponent implements OnInit {
     switch (section.type) {
       case 'ABOUT_ME':
         return AboutMeSectionComponent;
-        case 'PROJECTS':
+      case 'PROJECTS':
         return ProjectsSectionComponent;
-        case 'JOBS':
+      case 'JOBS':
         return JobsSectionComponent;
-        case 'SKILLS':
+      case 'SKILLS':
         return SkillsSectionComponent;
-        case 'ABOUT_ME':
-        return AboutMeSectionComponent;
       default:
         return;
     }
