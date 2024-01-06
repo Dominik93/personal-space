@@ -11,6 +11,11 @@ import { SkillsSectionComponent } from './skills-section/skills-section.componen
 import { JobsSectionComponent } from './jobs-section/jobs-section.component';
 import { Item, MenuComponent } from './menu/menu.component';
 
+export type SectionComponent = {
+  type: any;
+  inputs: any;
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -33,9 +38,11 @@ import { Item, MenuComponent } from './menu/menu.component';
 })
 export class AppComponent implements OnInit {
 
+  components: SectionComponent[] = [];
+
   configuration: Configuration = {
     menuSection: {
-      title: "sd",
+      title: "",
       itemLayout: "left"
     },
     sections: []
@@ -54,6 +61,8 @@ export class AppComponent implements OnInit {
         this.configuration = value;
         Object.keys(this.configuration.sections).forEach(key => {
           const section = this.configuration.sections[key];
+          const type = this.toType(section);
+          if (type) this.components.push({ type: type, inputs: { section: section } });
           this.items.push({
             show: !!section,
             label: section?.label,
@@ -66,6 +75,21 @@ export class AppComponent implements OnInit {
 
   onClick(event: string): void {
     this.viewportScroller.scrollToAnchor(event);
+  }
+
+  private toType(section: any) {
+    switch (section.type) {
+      case 'ABOUT_ME':
+        return AboutMeSectionComponent;
+      case 'PROJECTS':
+        return ProjectsSectionComponent;
+      case 'JOBS':
+        return JobsSectionComponent;
+      case 'SKILLS':
+        return SkillsSectionComponent;
+      default:
+        return;
+    }
   }
 
 }
