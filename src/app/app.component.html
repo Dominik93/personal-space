@@ -1,7 +1,6 @@
 <ps-menu [section]="configuration.menuSection" [items]="items" (onItemClick)="onClick($event)"></ps-menu>
 <div class="container">
-  <ps-about-me-section [section]="configuration.sections['aboutMe']"></ps-about-me-section>
-  <ps-skills-section [section]="configuration.sections['skills']"></ps-skills-section>
-  <ps-projects-section [section]="configuration.sections['projects']"></ps-projects-section>
-  <ps-jobs-section [section]="configuration.sections['jobs']"></ps-jobs-section>
+  <div *ngFor="let component of components">
+    <ng-container *ngComponentOutlet="component.type; inputs: component.inputs;"></ng-container>
+  </div>
 </div>

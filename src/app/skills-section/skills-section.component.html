@@ -1,5 +1,5 @@
 <ps-header [show]="!!section" [label]="section?.label" [id]="section?.anchor"></ps-header>
-<div class="row" *ngIf="section && section.type === 'PROGRESS_BAR'">
+<div class="row" *ngIf="section && section.mode === 'PROGRESS_BAR'">
     <div class="col-md-1"></div>
     <div class="col-md-10">
         <div class="row" style="margin-bottom: 10px;" *ngFor="let skill of section.skills">
@@ -18,7 +18,7 @@
     </div>
     <div class="col-md-1"></div>
 </div>
-<div class="row" *ngIf="section && section.type === 'ICONS'">
+<div class="row" *ngIf="section && section.mode === 'ICONS'">
     <div class="col-md-1"></div>
     <div class="col-md-2" *ngFor="let skill of section.skills">
         <img [title]="skill.name" [src]="skill?.image?.url" [alt]="skill?.image?.alt" [style]="skill?.image?.style" />

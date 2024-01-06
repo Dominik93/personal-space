@@ -13,6 +13,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
 
   getConfiguration(): Observable<Configuration> {
     const aboutMeSection: AboutMeSection = {
+      type: "ABOUT_ME",
       label: "About me",
       anchor: "aboutme",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id magna et ligula efficitur ullamcorper. Cras porta gravida leo, in ornare ex gravida et. Donec nibh libero, lobortis quis mollis vel, malesuada a tellus. Nunc tempor rutrum lectus sed scelerisque. Etiam justo leo, auctor eget enim quis, consequat consequat orci. Pellentesque leo elit, pretium vel vestibulum a, bibendum id risus. Mauris faucibus, eros eget ultrices sagittis, dui nunc pretium purus, a convallis neque sapien in nisl. Nunc vitae urna commodo, luctus est in, auctor nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc ante metus, sodales rutrum elementum ut, lobortis sed dui. Donec eu lectus sit amet dolor finibus accumsan eget id lacus. Etiam ac maximus tellus. Cras ac cursus felis. Integer a elit egestas, pellentesque urna non, fringilla erat. Integer ut dictum lectus. ",
@@ -38,6 +39,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
       ]
     };
     const projectsSection: ProjectsSection = {
+      type: "PROJECTS",
       label: "My work",
       anchor: "projects",
       additionalInfo: "I have worked on dozens of projects so I have picked only the latest for you.",
@@ -56,7 +58,6 @@ export class InMemoryConfigurationService implements ConfigurationService {
             }
           ]
         },
-
         {
           name: "Project 2",
           tag: "Web",
@@ -81,7 +82,6 @@ export class InMemoryConfigurationService implements ConfigurationService {
             }
           ]
         },
-
         {
           name: "Project 3",
           tag: "Other",
@@ -96,7 +96,6 @@ export class InMemoryConfigurationService implements ConfigurationService {
             }
           ]
         },
-
         {
           name: "Project 4",
           tag: "Other",
@@ -131,12 +130,12 @@ export class InMemoryConfigurationService implements ConfigurationService {
             }
           ]
         }
-
       ]
     }
 
-    const skillsSection: SkillsSection = {
-      type: 'PROGRESS_BAR',
+    const skillsSectionpProgresBar: SkillsSection = {
+      type: "SKILLS",
+      mode: 'PROGRESS_BAR',
       label: "Skills",
       anchor: "skills",
       skills: [
@@ -192,8 +191,68 @@ export class InMemoryConfigurationService implements ConfigurationService {
         },  
       ]
     }
+    
+    const skillsSectionpIcons: SkillsSection = {
+      type: "SKILLS",
+      mode: 'ICONS',
+      label: "Skills",
+      anchor: "skills",
+      skills: [
+        {
+          name: "Spring boot",
+          image: {
+            alt: "Spring boot",
+            url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKbe3Vg5PJ4wpjlDUy-noAzkT0dqhknQR4TL86jNAKA&s",
+            style: "width: 50%",
+          },
+          style: "",
+          level: 80
+        },  
+        {
+          name: "Openshift",
+          image: {
+            alt: "Openshift",
+            url: "https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-5/32/logo--openshift-512.png",
+            style: "width: 50%",
+          },
+          style: "",
+          level: 30
+        },
+        {
+          name: "Java",
+          image: {
+            alt: "Java",
+            url: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png",
+            style: "width: 50%",
+          },
+          style: "",
+          level: 80
+        },  
+        {
+          name: "Angular",
+          image: {
+            alt: "Angular",
+            url: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/21_Angular_logo_logos-512.png",
+            style: "width: 50%",
+          },
+          style: "",
+          level: 70
+        },
+        {
+          name: "JUnit",
+          image: {
+            alt: "JUnit",
+            url: "https://junit.org/junit5/assets/img/junit5-logo.png",
+            style: "width: 50%",
+          },
+          style: "",
+          level: 100
+        },  
+      ]
+    }
 
     const jobsSection: JobsSection = {
+      type: "JOBS",
       label: "Jobs",
       anchor: "jobs",
       jobs: [
@@ -210,7 +269,8 @@ export class InMemoryConfigurationService implements ConfigurationService {
       },
       sections: {
         aboutMe: aboutMeSection,
-        skills: skillsSection,
+        skillsSectionpIcons: skillsSectionpIcons,
+        skillsSectionpProgresBar: skillsSectionpProgresBar,
         projects: projectsSection,
         jobs: jobsSection
       }

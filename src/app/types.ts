@@ -9,11 +9,13 @@ export type MenuSection = {
     itemLayout: string
 }
 export type Intro = {
+    type: string,
     message: string,
     description: string
 }
 
 export type AboutMeSection = {
+    type: string,
     label: string,
     anchor: string,
     image: Image,
@@ -29,6 +31,7 @@ export type SocialMedia = {
 }
 
 export type ProjectsSection = {
+    type: string,
     label: string,
     anchor: string,
     additionalInfo: string,
@@ -44,6 +47,7 @@ export type Project = {
 }
 
 export type JobsSection = {
+    type: string,
     label: string
     anchor: string,
     jobs: Job[];
@@ -53,7 +57,8 @@ export type Job = {
 }
 
 export type SkillsSection = {
-    type: "PROGRESS_BAR" | "ICONS",
+    type: string,
+    mode: "PROGRESS_BAR" | "ICONS",
     label: string,
     anchor: string,
     skills: Skill[];
@@ -66,6 +71,7 @@ export type Skill = {
 }
 
 export type ServicesSection = {
+    type: string,
     label: string
     services: Service[]
 }
