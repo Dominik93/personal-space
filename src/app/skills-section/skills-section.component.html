@@ -1,27 +1,33 @@
-<ps-header [show]="!!section" [label]="section?.label" [id]="section?.anchor"></ps-header>
-<div class="row" *ngIf="section && section.mode === 'PROGRESS_BAR'">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        <div class="row" style="margin-bottom: 10px;" *ngFor="let skill of section.skills">
-            <div class="col-md-1">
-                <img [src]="skill?.image?.url" [title]="skill.name" [alt]="skill?.image?.alt"
-                    [style]="skill?.image?.style" />
-            </div>
-            <div class="col-md-11">
-                <br>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" [style]="'width: ' + skill.level + '%;' + skill.style"
-                        [attr.aria-valuenow]="skill.level" aria-valuemin="0" aria-valuemax="100"></div>
+<div *ngIf="section" [style]="section.style">
+    <div class="container">
+        <ps-header [show]="!!section" [label]="section.label" [id]="section.anchor"></ps-header>
+        <div class="row" *ngIf="section && section.mode === 'PROGRESS_BAR'">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="row" style="margin-bottom: 10px;" *ngFor="let skill of section.skills">
+                    <div class="col-md-1">
+                        <img [src]="skill?.image?.url" [title]="skill.name" [alt]="skill?.image?.alt"
+                            [style]="skill?.image?.style" />
+                    </div>
+                    <div class="col-md-11">
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar"
+                                [style]="'width: ' + skill.level + '%;' + skill.style"
+                                [attr.aria-valuenow]="skill.level" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>       
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row pb-5" *ngIf="section && section.mode === 'ICONS'">
+            <div class="col-md-1"></div>
+            <div class="col-md-2" *ngFor="let skill of section.skills">
+                <img [title]="skill.name" [src]="skill?.image?.url" [alt]="skill?.image?.alt"
+                    [style]="skill?.image?.style" />
+            </div>
+            <div class="col-md-1"></div>
+        </div>
     </div>
-    <div class="col-md-1"></div>
-</div>
-<div class="row" *ngIf="section && section.mode === 'ICONS'">
-    <div class="col-md-1"></div>
-    <div class="col-md-2" *ngFor="let skill of section.skills">
-        <img [title]="skill.name" [src]="skill?.image?.url" [alt]="skill?.image?.alt" [style]="skill?.image?.style" />
-    </div>
-    <div class="col-md-1"></div>
 </div>

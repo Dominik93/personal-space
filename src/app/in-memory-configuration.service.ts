@@ -14,6 +14,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
   getConfiguration(): Observable<Configuration> {
     const aboutMeSection: AboutMeSection = {
       type: "ABOUT_ME",
+      style: "",
       label: "About me",
       anchor: "aboutme",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id magna et ligula efficitur ullamcorper. Cras porta gravida leo, in ornare ex gravida et. Donec nibh libero, lobortis quis mollis vel, malesuada a tellus. Nunc tempor rutrum lectus sed scelerisque. Etiam justo leo, auctor eget enim quis, consequat consequat orci. Pellentesque leo elit, pretium vel vestibulum a, bibendum id risus. Mauris faucibus, eros eget ultrices sagittis, dui nunc pretium purus, a convallis neque sapien in nisl. Nunc vitae urna commodo, luctus est in, auctor nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc ante metus, sodales rutrum elementum ut, lobortis sed dui. Donec eu lectus sit amet dolor finibus accumsan eget id lacus. Etiam ac maximus tellus. Cras ac cursus felis. Integer a elit egestas, pellentesque urna non, fringilla erat. Integer ut dictum lectus. ",
@@ -46,6 +47,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
     };
     const projectsSection: ProjectsSection = {
       type: "PROJECTS",
+      style: "background-color: beige",
       label: "My work",
       anchor: "projects",
       additionalInfo: "I have worked on dozens of projects so I have picked only the latest for you.",
@@ -141,6 +143,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
 
     const skillsSectionpProgresBar: SkillsSection = {
       type: "SKILLS",
+      style: "",
       mode: 'PROGRESS_BAR',
       label: "Skills",
       anchor: "skills",
@@ -154,7 +157,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
           },
           style: "background-color: lime",
           level: 80
-        },  
+        },
         {
           name: "Openshift",
           image: {
@@ -174,7 +177,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
           },
           style: "",
           level: 80
-        },  
+        },
         {
           name: "Angular",
           image: {
@@ -194,12 +197,13 @@ export class InMemoryConfigurationService implements ConfigurationService {
           },
           style: "background-color: green",
           level: 100
-        },  
+        },
       ]
     }
-    
+
     const skillsSectionpIcons: SkillsSection = {
       type: "SKILLS",
+      style: "background-color: beige",
       mode: 'ICONS',
       label: "Skills",
       anchor: "skills",
@@ -213,7 +217,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
           },
           style: "",
           level: 80
-        },  
+        },
         {
           name: "Openshift",
           image: {
@@ -233,7 +237,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
           },
           style: "",
           level: 80
-        },  
+        },
         {
           name: "Angular",
           image: {
@@ -253,12 +257,13 @@ export class InMemoryConfigurationService implements ConfigurationService {
           },
           style: "",
           level: 100
-        },  
+        },
       ]
     }
 
     const jobsSection: JobsSection = {
       type: "JOBS",
+      style: "color:white; background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)",
       label: "Jobs",
       anchor: "jobs",
       jobs: [
@@ -267,13 +272,13 @@ export class InMemoryConfigurationService implements ConfigurationService {
           description: "Company 1 short desc",
           details: "Lorem ipsum dolor sit amet,<p>consectetur<p> adipiscing elit.<br> Aenean auctor mauris at neque efficitur, ac porta purus fringilla. Vestibulum tincidunt iaculis facilisis. Fusce mollis ante sed sodales auctor. Vestibulum sit amet dictum dolor. Sed eu mauris vel augue vestibulum congue vel vel orci. Aliquam non ipsum ante. Fusce at eleifend orci. "
         },
-        
+
         {
           name: "Company 2",
           description: "Company 2 short desc",
           details: "Donec eu volutpat mi, et iaculis massa. Duis efficitur euismod viverra. Aliquam tincidunt ac urna ut consequat. Cras vel leo ipsum. Aliquam cursus augue venenatis risus vulputate sagittis. Phasellus dictum lectus vitae justo iaculis pellentesque. Duis felis mauris, tristique ut pharetra eu, dignissim quis quam. Vivamus velit risus, aliquet egestas dui eget, sollicitudin hendrerit urna. Aenean at tortor sit amet metus rutrum malesuada nec at lorem. Morbi et tempus dolor. Nunc vestibulum mauris eget lorem varius dapibus. Proin ullamcorper risus varius orci lacinia accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis magna sit amet justo ultricies, vitae lobortis lacus lobortis. Vivamus semper tempus mi, ac euismod erat tincidunt eu. "
         },
-        
+
         {
           name: "Company 3",
           description: "Company 3 short desc",
@@ -285,7 +290,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
     const configuration: Configuration = {
       menuSection: {
         title: "Name Surname",
-        itemLayout: "right",
+        style: "ms-auto", // me-auto, ms-auto
       },
       sections: {
         aboutMe: aboutMeSection,

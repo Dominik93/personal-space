@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
   configuration: Configuration = {
     menuSection: {
       title: "",
-      itemLayout: "left"
+      style: "ms-auto"
     },
     sections: []
   }
