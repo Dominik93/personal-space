@@ -35,6 +35,12 @@ export class InMemoryConfigurationService implements ConfigurationService {
           link: "https://www.linkedin.com",
           icon: "https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-1024.png",
           style: "width: 50px;"
+        },
+        {
+          name: "Mail",
+          link: "mailto:name.surname@domain.com",
+          icon: "https://cdn4.iconfinder.com/data/icons/miu-black-social-2/60/mail-512.png",
+          style: "width: 50px;"
         }
       ]
     };
