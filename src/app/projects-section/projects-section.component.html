@@ -2,13 +2,13 @@
     [id]="section?.anchor"></ps-header>
 <div class="row" *ngIf="section">
     <div class="col-lg">
-        <ngb-carousel (slide)="onSlide($event)">
+        <ngb-carousel (slid)="onSlid($event)">
             <ng-template ngbSlide *ngFor="let project of section.projects">
                 <div class="row" style="min-height: 350px;">
                     <div class="col-md-1"></div>
                     <div class="col-md-4">
-                        <div class="picsum-img-wrapper">
-                            <img [src]="currentImage?.url" [alt]="currentImage?.alt" [style]="currentImage?.style" />
+                        <div class="picsum-img-wrapper" *ngIf="currentImage">
+                            <img [src]="currentImage.url" [alt]="currentImage.alt" [style]="currentImage.style" />
                         </div>
                     </div>
                     <div class="col-md-6">

@@ -35,7 +35,7 @@ export class ProjectsSectionComponent implements OnInit, OnDestroy {
     this.register();
   }
 
-  onSlide(event: any) {
+  onSlid(event: any) {
     this.index = 0;
     this.currentProject = this.section?.projects[event.current.split("-")[2]];
     this.images = this.currentProject?.images ?? [];

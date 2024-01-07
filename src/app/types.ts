@@ -53,7 +53,9 @@ export type JobsSection = {
     jobs: Job[];
 }
 export type Job = {
-    name: string
+    name: string,
+    description: string,
+    details: string,
 }
 
 export type SkillsSection = {

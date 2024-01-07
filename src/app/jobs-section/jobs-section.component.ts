@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { JobsSection } from '../types';
+import { Job, JobsSection } from '../types';
 import { HeaderComponent } from '../header/header.component';
 
 @Component({
@@ -14,4 +14,9 @@ export class JobsSectionComponent {
 
   @Input() section?: JobsSection;
 
+  selectedJob?: Job;
+
+  onClick($event: MouseEvent, job: Job) {
+    this.selectedJob = job;
+  }
 }
