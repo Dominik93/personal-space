@@ -48,14 +48,14 @@ export type Project = {
     shortDescription: string;
 }
 
-export type JobsSection = {
+export type TimelineSection = {
     type: string,
     style: string,
     label: string
     anchor: string,
-    jobs: Job[];
+    events: Event[];
 }
-export type Job = {
+export type Event = {
     name: string,
     description: string,
     details: string,

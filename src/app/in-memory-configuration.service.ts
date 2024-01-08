@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ConfigurationService } from './configuration.service';
 import { Observable, of } from 'rxjs';
-import { AboutMeSection, Configuration, JobsSection, ProjectsSection, SkillsSection } from './types';
+import { AboutMeSection, Configuration, TimelineSection, ProjectsSection, SkillsSection } from './types';
 import { right } from '@popperjs/core';
 
 @Injectable({
@@ -261,27 +261,25 @@ export class InMemoryConfigurationService implements ConfigurationService {
       ]
     }
 
-    const jobsSection: JobsSection = {
-      type: "JOBS",
+    const timelineSection: TimelineSection = {
+      type: "TIMELINE",
       style: "color:white; background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)",
-      label: "Jobs",
-      anchor: "jobs",
-      jobs: [
+      label: "Timelaps",
+      anchor: "timelaps",
+      events: [
         {
           name: "Company 1",
           description: "Company 1 short desc",
           details: "Lorem ipsum dolor sit amet,<p>consectetur<p> adipiscing elit.<br> Aenean auctor mauris at neque efficitur, ac porta purus fringilla. Vestibulum tincidunt iaculis facilisis. Fusce mollis ante sed sodales auctor. Vestibulum sit amet dictum dolor. Sed eu mauris vel augue vestibulum congue vel vel orci. Aliquam non ipsum ante. Fusce at eleifend orci. "
         },
-
         {
           name: "Company 2",
           description: "Company 2 short desc",
           details: "Donec eu volutpat mi, et iaculis massa. Duis efficitur euismod viverra. Aliquam tincidunt ac urna ut consequat. Cras vel leo ipsum. Aliquam cursus augue venenatis risus vulputate sagittis. Phasellus dictum lectus vitae justo iaculis pellentesque. Duis felis mauris, tristique ut pharetra eu, dignissim quis quam. Vivamus velit risus, aliquet egestas dui eget, sollicitudin hendrerit urna. Aenean at tortor sit amet metus rutrum malesuada nec at lorem. Morbi et tempus dolor. Nunc vestibulum mauris eget lorem varius dapibus. Proin ullamcorper risus varius orci lacinia accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis magna sit amet justo ultricies, vitae lobortis lacus lobortis. Vivamus semper tempus mi, ac euismod erat tincidunt eu. "
         },
-
         {
-          name: "Company 3",
-          description: "Company 3 short desc",
+          name: "University 3",
+          description: "University 3 short desc",
           details: "Sed vitae consequat quam, non auctor velit. Donec ultrices ante lobortis, mollis urna gravida, pharetra massa. Donec tristique molestie velit, sit amet eleifend mauris pellentesque in. In efficitur accumsan turpis, consectetur gravida lorem tincidunt sit amet. Cras scelerisque quam id tellus fringilla, id molestie mauris venenatis. Nulla eget bibendum dolor. Pellentesque ultrices est vel lectus facilisis, eu sagittis dolor convallis. Pellentesque varius dui sit amet dictum commodo. Nam vitae ornare erat. Mauris sollicitudin bibendum semper. "
         }
       ]
@@ -297,7 +295,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
         skillsSectionpIcons: skillsSectionpIcons,
         skillsSectionpProgresBar: skillsSectionpProgresBar,
         projects: projectsSection,
-        jobs: jobsSection
+        timeline: timelineSection
       }
     }
     return of(configuration);

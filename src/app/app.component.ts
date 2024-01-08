@@ -8,8 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
 import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
-import { JobsSectionComponent } from './jobs-section/jobs-section.component';
 import { Item, MenuComponent } from './menu/menu.component';
+import { TimelineSectionComponent } from './timeline-section/timeline-section.component';
 
 export type SectionComponent = {
   type: any;
@@ -30,7 +30,7 @@ export type SectionComponent = {
     AboutMeSectionComponent,
     SkillsSectionComponent,
     ProjectsSectionComponent,
-    JobsSectionComponent,
+    TimelineSectionComponent,
 
     RouterOutlet],
   templateUrl: './app.component.html',
@@ -83,8 +83,8 @@ export class AppComponent implements OnInit {
         return AboutMeSectionComponent;
       case 'PROJECTS':
         return ProjectsSectionComponent;
-      case 'JOBS':
-        return JobsSectionComponent;
+      case 'TIMELINE':
+        return TimelineSectionComponent;
       case 'SKILLS':
         return SkillsSectionComponent;
       default:

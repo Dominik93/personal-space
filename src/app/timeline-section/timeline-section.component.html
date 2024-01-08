@@ -1,0 +1,22 @@
+<div *ngIf="section" [style]="section.style">
+    <div class="container">
+      <ps-header [show]="!!section" [label]="section.label" [id]="section.anchor"></ps-header>
+      <div class="row" *ngIf="section">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+          <div class="list-group list-group-checkable d-grid gap-2 border-0">
+            <label class="list-group-item rounded-3 py-3" [class.active]="selectedEvent?.name === event.name"
+              *ngFor="let event of section.events" (click)="onClick($event, event)">
+              {{event.name}}
+              <span class="d-block small opacity-50">{{event.description}}</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <p [innerHTML]="selectedEvent?.details">
+          </p>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+  </div>
