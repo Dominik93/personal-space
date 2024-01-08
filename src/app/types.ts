@@ -64,17 +64,31 @@ export type Event = {
 export type SkillsSection = {
     type: string,
     style: string,
-    mode: "PROGRESS_BAR" | "ICONS",
     label: string,
     anchor: string,
-    skills: Skill[];
+    skills: Skill[]
 }
 export type Skill = {
-    image: Image;
+    image: Image,
+    name: string,
+    style: string,
+    level?: number
+}
+
+
+export type ItemsSection = {
+    type: string,
+    style: string,
+    label: string,
+    anchor: string,
+    items: Item[];
+}
+export type Item = {
+    image: Image,
     name: string,
     style: string
-    level?: number,
 }
+
 
 export type ServicesSection = {
     type: string,

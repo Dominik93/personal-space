@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SkillsSection } from '../types';
 import { HeaderComponent } from '../header/header.component';
 
@@ -10,15 +10,8 @@ import { HeaderComponent } from '../header/header.component';
   templateUrl: './skills-section.component.html',
   styleUrl: './skills-section.component.css'
 })
-export class SkillsSectionComponent implements OnInit {
+export class SkillsSectionComponent {
 
   @Input() section?: SkillsSection;
 
-  padding: any[] = [];
-
-  ngOnInit(): void {
-    const items = this.section?.skills.length ?? 0;
-    const emptyBlocks = 10 - items;
-    this.padding = new Array(Math.floor(emptyBlocks / 2)).fill(0)
-  }
 }

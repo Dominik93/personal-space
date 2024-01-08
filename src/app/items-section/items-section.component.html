@@ -1,0 +1,13 @@
+<div *ngIf="section" [style]="section.style">
+    <div class="container">
+        <ps-header [show]="!!section" [label]="section.label" [id]="section.anchor"></ps-header>
+        <div class="row pb-5">
+            <div class="col-md-1"></div>
+            <div class="col-md-2 d-flex justify-content-center" *ngFor="let item of section.items">
+                <img [src]="item?.image?.url" [alt]="item?.image?.alt" [style]="item?.image?.style" placement="bottom"
+                    [ngbTooltip]="item.name" />
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</div>

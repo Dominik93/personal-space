@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ConfigurationService } from './configuration.service';
 import { Observable, of } from 'rxjs';
-import { AboutMeSection, Configuration, TimelineSection, ProjectsSection, SkillsSection } from './types';
+import { AboutMeSection, Configuration, TimelineSection, ProjectsSection, SkillsSection, ItemsSection } from './types';
 import { right } from '@popperjs/core';
 
 @Injectable({
@@ -141,10 +141,9 @@ export class InMemoryConfigurationService implements ConfigurationService {
       ]
     }
 
-    const skillsSectionpProgresBar: SkillsSection = {
+    const skillsSection: SkillsSection = {
       type: "SKILLS",
       style: "",
-      mode: 'PROGRESS_BAR',
       label: "Skills",
       anchor: "skills",
       skills: [
@@ -201,13 +200,12 @@ export class InMemoryConfigurationService implements ConfigurationService {
       ]
     }
 
-    const skillsSectionpIcons: SkillsSection = {
-      type: "SKILLS",
+    const itemSection: ItemsSection = {
+      type: "ITEMS",
       style: "background-color: beige",
-      mode: 'ICONS',
-      label: "Skills",
-      anchor: "skills",
-      skills: [
+      label: "Items",
+      anchor: "items",
+      items: [
         {
           name: "Spring boot",
           image: {
@@ -215,8 +213,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
             url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUKbe3Vg5PJ4wpjlDUy-noAzkT0dqhknQR4TL86jNAKA&s",
             style: "width: 50%",
           },
-          style: "",
-          level: 80
+          style: ""
         },
         {
           name: "Openshift",
@@ -225,8 +222,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
             url: "https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-5/32/logo--openshift-512.png",
             style: "width: 50%",
           },
-          style: "",
-          level: 30
+          style: ""
         },
         {
           name: "Java",
@@ -235,8 +231,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
             url: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png",
             style: "width: 50%",
           },
-          style: "",
-          level: 80
+          style: ""
         },
         {
           name: "Angular",
@@ -245,8 +240,7 @@ export class InMemoryConfigurationService implements ConfigurationService {
             url: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/21_Angular_logo_logos-512.png",
             style: "width: 50%",
           },
-          style: "",
-          level: 70
+          style: ""
         },
         {
           name: "JUnit",
@@ -255,11 +249,11 @@ export class InMemoryConfigurationService implements ConfigurationService {
             url: "https://junit.org/junit5/assets/img/junit5-logo.png",
             style: "width: 50%",
           },
-          style: "",
-          level: 100
+          style: ""
         },
       ]
     }
+    
 
     const timelineSection: TimelineSection = {
       type: "TIMELINE",
@@ -292,8 +286,8 @@ export class InMemoryConfigurationService implements ConfigurationService {
       },
       sections: {
         aboutMe: aboutMeSection,
-        skillsSectionpIcons: skillsSectionpIcons,
-        skillsSectionpProgresBar: skillsSectionpProgresBar,
+        itemSection: itemSection,
+        skillsSection: skillsSection,
         projects: projectsSection,
         timeline: timelineSection
       }

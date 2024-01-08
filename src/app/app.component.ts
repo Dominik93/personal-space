@@ -10,6 +10,7 @@ import { AboutMeSectionComponent } from './about-me-section/about-me-section.com
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { Item, MenuComponent } from './menu/menu.component';
 import { TimelineSectionComponent } from './timeline-section/timeline-section.component';
+import { ItemsSectionComponent } from './items-section/items-section.component';
 
 export type SectionComponent = {
   type: any;
@@ -27,10 +28,6 @@ export type SectionComponent = {
     HeaderComponent,
 
     MenuComponent,
-    AboutMeSectionComponent,
-    SkillsSectionComponent,
-    ProjectsSectionComponent,
-    TimelineSectionComponent,
 
     RouterOutlet],
   templateUrl: './app.component.html',
@@ -87,6 +84,8 @@ export class AppComponent implements OnInit {
         return TimelineSectionComponent;
       case 'SKILLS':
         return SkillsSectionComponent;
+      case 'ITEMS':
+        return ItemsSectionComponent;
       default:
         return;
     }
