@@ -1,4 +1,5 @@
 <div *ngIf="section" [style]="section.style">
+    <ps-space></ps-space>
     <div class="container">
         <ps-header [show]="!!section" [label]="section.label" [additionalInfo]="section.additionalInfo"
             [id]="section.anchor"></ps-header>
@@ -25,4 +26,5 @@
             </div>
         </div>
     </div>
+    <ps-space></ps-space>
 </div>

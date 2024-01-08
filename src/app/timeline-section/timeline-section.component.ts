@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { TimelineSection, Event } from '../types';
+import { SpaceComponent } from '../space/space.component';
 
 @Component({
   selector: 'ps-timeline-section',
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, SpaceComponent],
   templateUrl: './timeline-section.component.html',
   styleUrl: './timeline-section.component.css'
 })

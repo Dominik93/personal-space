@@ -11,6 +11,7 @@ import { SkillsSectionComponent } from './skills-section/skills-section.componen
 import { Item, MenuComponent } from './menu/menu.component';
 import { TimelineSectionComponent } from './timeline-section/timeline-section.component';
 import { ItemsSectionComponent } from './items-section/items-section.component';
+import { SpaceComponent } from './space/space.component';
 
 export type SectionComponent = {
   type: any;
@@ -26,6 +27,7 @@ export type SectionComponent = {
     NgbModule,
 
     HeaderComponent,
+    SpaceComponent,
 
     MenuComponent,
 

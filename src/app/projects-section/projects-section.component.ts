@@ -4,11 +4,12 @@ import { HeaderComponent } from '../header/header.component';
 import { Image, Project, ProjectsSection } from '../types';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { Subscriber, Subscription, interval } from 'rxjs';
+import { SpaceComponent } from '../space/space.component';
 
 @Component({
   selector: 'ps-projects-section',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, NgbCarouselModule],
+  imports: [CommonModule, HeaderComponent, SpaceComponent, NgbCarouselModule],
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.css',
 

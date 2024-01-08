@@ -3,11 +3,12 @@ import { Component, Input } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { ItemsSection } from '../types';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { SpaceComponent } from '../space/space.component';
 
 @Component({
   selector: 'ps-items-section',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, NgbTooltipModule],
+  imports: [CommonModule, HeaderComponent, SpaceComponent, NgbTooltipModule],
   templateUrl: './items-section.component.html',
   styleUrl: './items-section.component.css'
 })
