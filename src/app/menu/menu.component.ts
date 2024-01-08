@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MenuSection } from '../types';
 
 export type Item = {
@@ -19,11 +19,5 @@ export class MenuComponent {
 
   @Input() section?: MenuSection;
   @Input() items: Item[] = [];
-
-  @Output() onItemClick = new EventEmitter<string>();
-
-  onClick(elementId: string): void {
-    this.onItemClick.emit(elementId);
-  }
 
 }

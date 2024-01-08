@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { CommonModule, ViewportScroller } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigurationService } from './configuration.service';
@@ -50,7 +50,6 @@ export class AppComponent implements OnInit {
   items: Item[] = [];
 
   constructor(
-    private viewportScroller: ViewportScroller,
     @Inject("ConfigurationService") private configurationService: ConfigurationService) {
   }
 
@@ -70,10 +69,6 @@ export class AppComponent implements OnInit {
         })
 
       });
-  }
-
-  onClick(event: string): void {
-    this.viewportScroller.scrollToAnchor(event);
   }
 
   private toType(section: any) {
