@@ -8,7 +8,7 @@
                 <div class="row" style="margin-bottom: 10px;" *ngFor="let skill of section.skills">
                     <div class="col-md-1">
                         <img [src]="skill?.image?.url" [title]="skill.name" [alt]="skill?.image?.alt"
-                            [style]="skill?.image?.style" />
+                            [style]="skill?.image?.style" [ngbTooltip]="skill.name" placement="left" />
                     </div>
                     <div class="col-md-11">
                         <br>
