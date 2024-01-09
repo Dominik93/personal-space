@@ -48,3 +48,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+src/assets/configuration/*
+!src/assets/configuration/sample.json
