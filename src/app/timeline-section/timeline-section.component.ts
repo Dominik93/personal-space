@@ -26,14 +26,4 @@ export class TimelineSectionComponent implements OnInit {
     this.selectedEvent = event;
   }
 
-  selectedStyle(name: any): { [klass: string]: any; } {
-    console.log("selectedStyle");
-    if(!this.section) {
-      return {};
-    }
-    const ret =  this.selectedEvent?.name === name ? this.section.selectedStyle : {}
-    
-    console.log("selectedStyle", ret);
-    return ret
-  }
 }
