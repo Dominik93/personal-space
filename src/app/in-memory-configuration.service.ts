@@ -260,6 +260,8 @@ export class InMemoryConfigurationService implements ConfigurationService {
       style: "color:white; background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)",
       label: "Timelaps",
       anchor: "timelaps",
+      hoverStyle: "background: beige",
+      selectedStyle: {"background-color": "rgb(239, 239, 175)"},
       events: [
         {
           name: "Company 1",

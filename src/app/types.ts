@@ -51,9 +51,11 @@ export type Project = {
 export type TimelineSection = {
     type: string,
     style: string,
-    label: string
+    label: string,
     anchor: string,
-    events: Event[];
+    hoverStyle: string,
+    selectedStyle: { [klass: string]: any; },
+    events: Event[],
 }
 export type Event = {
     name: string,
