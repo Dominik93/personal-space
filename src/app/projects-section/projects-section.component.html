@@ -3,6 +3,7 @@
     <div class="container">
         <ps-header [show]="!!section" [label]="section.label" [additionalInfo]="section.additionalInfo"
             [id]="section.anchor"></ps-header>
+        <ps-space></ps-space>
         <div class="row">
             <div class="col-lg">
                 <ngb-carousel (slid)="onSlid($event)">
@@ -16,8 +17,10 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                {{project.name}}
+                                <h1>{{project.name}}</h1>
                                 <p [innerHTML]="project.description"></p>
+                                <p [innerHTML]="project.details"></p>
+                                <a *ngIf="project.demoUrl" [href]="project.demoUrl">Demo</a>
                             </div>
                             <div class="col-md-1"></div>
                         </div>

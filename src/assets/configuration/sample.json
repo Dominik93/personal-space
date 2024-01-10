@@ -158,9 +158,10 @@
                 {
                     "name": "Project 1",
                     "tag": "Web",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis tempus mauris, vitae pulvinar nibh egestas quis. Donec eu metus id erat sagittis maximus a sed nisl. Fusce vestibulum tortor leo, nec pellentesque turpis finibus eget. Integer commodo, ex at ullamcorper fringilla, lacus risus commodo tellus, eget consequat sem nisi non mauris. Aliquam elit sem, porta id arcu eget, dignissim sollicitudin sem. Suspendisse commodo ut urna sit amet pharetra. Donec quis pellentesque nulla. Donec varius leo in diam aliquam egestas. Vestibulum ac tempor tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus nec sagittis elit. Nulla ornare euismod urna, tincidunt elementum erat efficitur sit amet. Duis elementum, elit id dictum eleifend, orci dui hendrerit eros, sed varius est augue ac magna.",
-                    "shortDescription": "Lorem ipsum dolor sit amet...",
+                    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis tempus mauris, vitae pulvinar nibh egestas quis. Donec eu metus id erat sagittis maximus a sed nisl. Fusce vestibulum tortor leo, nec pellentesque turpis finibus eget. Integer commodo, ex at ullamcorper fringilla, lacus risus commodo tellus, eget consequat sem nisi non mauris. Aliquam elit sem, porta id arcu eget, dignissim sollicitudin sem. Suspendisse commodo ut urna sit amet pharetra. Donec quis pellentesque nulla. Donec varius leo in diam aliquam egestas. Vestibulum ac tempor tellus.",
+                    "description": "Lorem ipsum dolor sit amet...",
                     "imageChangeInterval": 5000,
+                    "demoUrl": "http://demo",
                     "images": [
                         {
                             "url": "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29ya3xlbnwwfHwwfHx8MA%3D%3D",
@@ -172,8 +173,8 @@
                 {
                     "name": "Project 2",
                     "tag": "Web",
-                    "description": "Phasellus mollis non elit vel finibus. Phasellus tellus nunc, dictum sit amet eleifend aliquam, posuere a nunc. Aenean vel leo ultricies, rutrum quam ac, feugiat lorem. Etiam ornare diam ut dolor varius fermentum id interdum ante. Donec laoreet diam ut urna rutrum egestas. Duis elementum, felis ut pellentesque dignissim, mauris ipsum posuere diam, at tincidunt odio sem nec turpis. Praesent suscipit, neque ac semper mollis, ex lectus vestibulum dolor, eget tristique tortor nisi et nisi.",
-                    "shortDescription": "Phasellus mollis...",
+                    "details": "Phasellus mollis non elit vel finibus. Phasellus tellus nunc, dictum sit amet eleifend aliquam, posuere a nunc. Aenean vel leo ultricies, rutrum quam ac, feugiat lorem. Etiam ornare diam ut dolor varius fermentum id interdum ante. Donec laoreet diam ut urna rutrum egestas. Duis elementum, felis ut pellentesque dignissim, mauris ipsum posuere diam, at tincidunt odio sem nec turpis. Praesent suscipit, neque ac semper mollis, ex lectus vestibulum dolor, eget tristique tortor nisi et nisi.",
+                    "description": "Phasellus mollis...",
                     "imageChangeInterval": 5000,
                     "images": [
                         {
@@ -196,8 +197,8 @@
                 {
                     "name": "Project 3",
                     "tag": "Other",
-                    "description": "Suspendisse potenti. Morbi dapibus nunc diam, at bibendum nibh rhoncus nec. Etiam maximus dui ac pulvinar lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas dolor eros, maximus ac diam in, egestas tempor ex. Aliquam consectetur, eros ut consequat tempus, dui elit gravida elit, a imperdiet erat diam eget orci. Phasellus libero urna, cursus non lacus eu, egestas dignissim nunc. Etiam accumsan tellus diam, eu dictum est posuere non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent massa mauris, efficitur quis ipsum id, pellentesque vehicula lectus. In gravida porttitor massa, sed porttitor mauris vulputate vehicula.",
-                    "shortDescription": "Suspendisse potenti.",
+                    "details": "Suspendisse potenti. Morbi dapibus nunc diam, at bibendum nibh rhoncus nec. Etiam maximus dui ac pulvinar lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas dolor eros, maximus ac diam in, egestas tempor ex. Aliquam consectetur, eros ut consequat tempus, dui elit gravida elit, a imperdiet erat diam eget orci. Phasellus libero urna, cursus non lacus eu, egestas dignissim nunc. Etiam accumsan tellus diam, eu dictum est posuere non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent massa mauris, efficitur quis ipsum id, pellentesque vehicula lectus. In gravida porttitor massa, sed porttitor mauris vulputate vehicula.",
+                    "description": "Suspendisse potenti.",
                     "imageChangeInterval": 5000,
                     "images": [
                         {

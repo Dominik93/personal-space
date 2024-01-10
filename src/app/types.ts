@@ -37,15 +37,16 @@ export type ProjectsSection = {
     label: string,
     anchor: string,
     additionalInfo: string,
-    projects: Project[];
+    projects: Project[],
 }
 export type Project = {
-    name: string;
-    tag: string;
+    name: string,
+    description: string,
+    tag: string,
     imageChangeInterval: number,
-    images: Image[];
-    description: string;
-    shortDescription: string;
+    images: Image[],
+    details: string,
+    demoUrl: string,
 }
 
 export type TimelineSection = {
@@ -83,7 +84,7 @@ export type ItemsSection = {
     style: string,
     label: string,
     anchor: string,
-    items: Item[];
+    items: Item[],
 }
 export type Item = {
     image: Image,
