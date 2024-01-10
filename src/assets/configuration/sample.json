@@ -1,7 +1,8 @@
 {
     "menuSection": {
         "title": "Name Surname",
-        "style": "ms-auto"
+        "style": "background-color: green",
+        "itemsStyle": "ms-auto"
     },
     "sections": {
         "aboutMe": {

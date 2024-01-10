@@ -42,7 +42,8 @@ export class AppComponent implements OnInit {
   configuration: Configuration = {
     menuSection: {
       title: "",
-      style: "ms-auto"
+      itemsStyle: "ms-auto",
+      style: ""
     },
     sections: []
   }

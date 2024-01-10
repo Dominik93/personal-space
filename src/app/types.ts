@@ -7,6 +7,7 @@ export type Configuration = {
 export type MenuSection = {
     title: string,
     style: string,
+    itemsStyle: string,
 }
 export type Intro = {
     type: string,

@@ -14,7 +14,8 @@ export class DefaultConfigurationService implements ConfigurationService {
     const configuration: Configuration = {
       menuSection: {
         title: "",
-        style: ""
+        style: "",
+        itemsStyle: ""
       },
       sections: []
     }
