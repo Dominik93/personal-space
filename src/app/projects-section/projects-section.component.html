@@ -8,7 +8,7 @@
             <div class="col-lg">
                 <ngb-carousel (slid)="onSlid($event)">
                     <ng-template ngbSlide *ngFor="let project of section.projects">
-                        <div class="row" style="min-height: 350px;">
+                        <div class="row" style="min-height: 400px;">
                             <div class="col-md-1"></div>
                             <div class="col-md-4">
                                 <div class="picsum-img-wrapper" *ngIf="currentImage">
@@ -18,8 +18,8 @@
                             </div>
                             <div class="col-md-6">
                                 <h1>{{project.name}}</h1>
-                                <p [innerHTML]="project.description"></p>
-                                <p [innerHTML]="project.details"></p>
+                                <ps-paragraph [paragraph]="project.description"></ps-paragraph>
+                                <ps-paragraph [paragraph]="project.details"></ps-paragraph>
                                 <a *ngIf="project.demoUrl" [href]="project.demoUrl">Demo</a>
                             </div>
                             <div class="col-md-1"></div>

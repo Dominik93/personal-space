@@ -22,7 +22,7 @@ export type AboutMeSection = {
     anchor: string,
     image: Image,
     socialMediaStyle: string,
-    description: string,
+    description: Paragraph,
     socialMedia: SocialMedia[]
 }
 export type SocialMedia = {
@@ -42,11 +42,11 @@ export type ProjectsSection = {
 }
 export type Project = {
     name: string,
-    description: string,
+    description: Paragraph,
     tag: string,
     imageChangeInterval: number,
     images: Image[],
-    details: string,
+    details: Paragraph,
     demoUrl: string,
 }
 
@@ -55,14 +55,19 @@ export type TimelineSection = {
     style: string,
     label: string,
     anchor: string,
+    eventsContainer: EventsContainer,
+}
+
+export type EventsContainer = {
     hoverStyle: string,
     selectedStyle: { [klass: string]: any; },
     events: Event[],
 }
+
 export type Event = {
     name: string,
     description: string,
-    details: string,
+    details: Paragraph,
 }
 
 export type SkillsSection = {
@@ -125,4 +130,10 @@ export type Image = {
     alt: String,
     link?: string,
     style: string
+}
+
+
+export type Paragraph = {
+    style?: string,
+    content: string
 }

@@ -6,21 +6,21 @@
             <div class="col-md-1"></div>
             <div class="col-md-3">
                 <div class="list-group list-group-checkable d-grid gap-2 border-0">
-                    <div *ngFor="let event of section.events">
+                    <div *ngFor="let event of section.eventsContainer.events">
                         <label class="list-group-item rounded-3 py-3" *ngIf="event.name === selectedEvent?.name"
-                            [style]="section.selectedStyle" (click)="onClick($event, event)"
-                            [hover-style]="section.hoverStyle">
+                            [style]="section.eventsContainer.selectedStyle" (click)="onClick($event, event)"
+                            [hover-style]="section.eventsContainer.hoverStyle">
                             {{event.name}}
                             <span class="d-block small opacity-50">{{event.description}}</span> </label>
                         <label class="list-group-item rounded-3 py-3" *ngIf="event.name !== selectedEvent?.name"
-                            (click)="onClick($event, event)" [hover-style]="section.hoverStyle">
+                            (click)="onClick($event, event)" [hover-style]="section.eventsContainer.hoverStyle">
                             {{event.name}}
                             <span class="d-block small opacity-50">{{event.description}}</span> </label>
                     </div>
                 </div>
             </div>
             <div class="col-md-7">
-                <p [innerHTML]="selectedEvent?.details"></p>
+                <ps-paragraph [paragraph]="selectedEvent.details"></ps-paragraph>
             </div>
             <div class="col-md-1"></div>
         </div>

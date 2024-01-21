@@ -3,11 +3,12 @@ import { Component, Input } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { AboutMeSection } from '../types';
 import { SpaceComponent } from '../space/space.component';
+import { ParagraphComponent } from '../paragraph/paragraph.component';
 
 @Component({
   selector: 'ps-about-me-section',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, SpaceComponent],
+  imports: [CommonModule, HeaderComponent, SpaceComponent, ParagraphComponent],
   templateUrl: './about-me-section.component.html',
   styleUrl: './about-me-section.component.css'
 })
