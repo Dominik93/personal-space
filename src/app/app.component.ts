@@ -42,6 +42,9 @@ export class AppComponent implements OnInit {
 
   configuration: Configuration = {
     title: "",
+    layout: {
+      type: 'SIMPLE'
+    },
     menuSection: {
       title: { content: "" },
       itemsContainer: {
@@ -68,11 +71,12 @@ export class AppComponent implements OnInit {
           const section = this.configuration.sections[key];
           const type = this.toType(section);
           if (type) this.components.push({ type: type, inputs: { section: section } });
-          this.items.push({
-            show: !!section,
-            label: section?.label,
-            anchor: section?.anchor
-          });
+          if(section.showInMenu) {
+            this.items.push({
+              label: section?.label,
+              anchor: section?.anchor
+            });
+          }
         })
 
       });

@@ -2,7 +2,13 @@ export type Configuration = {
     title: string,
     menuSection: MenuSection,
     intro?: Intro,
+    layout: Layout,
     sections: any
+}
+
+export type Layout = {
+    type: 'SIMPLE' | 'BORDERED',
+    leftBorderStyle?: string
 }
 
 export type MenuSection = {
@@ -14,6 +20,7 @@ export type MenuSection = {
 export type MenuItemContainer = {
     itemsStyle: string,
 }
+
 
 export type Intro = {
     type: string,
@@ -93,6 +100,7 @@ export type Skill = {
 
 export type ItemsSection = {
     type: string,
+    showInMenu: boolean,
     style: string,
     label: string,
     anchor: string,

@@ -3,7 +3,6 @@ import { Component, Input } from '@angular/core';
 import { MenuSection } from '../../types';
 
 export type Item = {
-  show: boolean;
   label: string;
   anchor: string;
 }

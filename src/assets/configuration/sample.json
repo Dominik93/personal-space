@@ -1,5 +1,8 @@
 {
     "title": "Name Surname",
+    "layout": {
+      "type": "SIMPLE" 
+    },
     "menuSection": {
         "title": {
             "content": "Name Surname"
@@ -12,6 +15,7 @@
     "sections": {
         "aboutMe": {
             "type": "ABOUT_ME",
+            "showInMenu": true,
             "style": "",
             "label": "About me",
             "anchor": "aboutme",
@@ -48,6 +52,7 @@
         },
         "itemSection": {
             "type": "ITEMS",
+            "showInMenu": true,
             "style": "background-color: beige",
             "label": "Items",
             "anchor": "items",
@@ -101,6 +106,7 @@
         },
         "skillsSection": {
             "type": "SKILLS",
+            "showInMenu": true,
             "style": "",
             "label": "Skills",
             "anchor": "skills",
@@ -159,6 +165,7 @@
         },
         "projects": {
             "type": "PROJECTS",
+            "showInMenu": true,
             "style": "background-color: beige",
             "label": "My work",
             "anchor": "projects",
@@ -272,6 +279,7 @@
         },
         "timeline": {
             "type": "TIMELINE",
+            "showInMenu": true,
             "style": "color:white; background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)",
             "label": "Timelaps",
             "anchor": "timelaps",
