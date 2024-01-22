@@ -12,6 +12,7 @@ import { Item, MenuComponent } from './menu/menu.component';
 import { TimelineSectionComponent } from './timeline-section/timeline-section.component';
 import { ItemsSectionComponent } from './items-section/items-section.component';
 import { SpaceComponent } from './space/space.component';
+import { Title } from '@angular/platform-browser';
 
 export type SectionComponent = {
   type: any;
@@ -40,9 +41,12 @@ export class AppComponent implements OnInit {
   components: SectionComponent[] = [];
 
   configuration: Configuration = {
+    title: "",
     menuSection: {
-      title: "",
-      itemsStyle: "ms-auto",
+      title: { content: "" },
+      itemsContainer: {
+        itemsStyle: "ms-auto"
+      },
       style: ""
     },
     sections: []
@@ -51,12 +55,14 @@ export class AppComponent implements OnInit {
   items: Item[] = [];
 
   constructor(
-    @Inject("ConfigurationService") private configurationService: ConfigurationService) {
+    @Inject("ConfigurationService") private configurationService: ConfigurationService,
+    private title: Title) {
   }
 
   ngOnInit() {
     this.configurationService.getConfiguration()
       .subscribe(value => {
+        this.title.setTitle(value.title);
         this.configuration = value;
         Object.keys(this.configuration.sections).forEach(key => {
           const section = this.configuration.sections[key];

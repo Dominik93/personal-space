@@ -1,14 +1,20 @@
 export type Configuration = {
+    title: string,
     menuSection: MenuSection,
     intro?: Intro,
     sections: any
 }
 
 export type MenuSection = {
-    title: string,
+    title: Content,
     style: string,
+    itemsContainer: MenuItemContainer,
+}
+
+export type MenuItemContainer = {
     itemsStyle: string,
 }
+
 export type Intro = {
     type: string,
     message: string,
@@ -22,7 +28,7 @@ export type AboutMeSection = {
     anchor: string,
     image: Image,
     socialMediaStyle: string,
-    description: Paragraph,
+    description: Content,
     socialMedia: SocialMedia[]
 }
 export type SocialMedia = {
@@ -42,11 +48,11 @@ export type ProjectsSection = {
 }
 export type Project = {
     name: string,
-    description: Paragraph,
+    description: Content,
     tag: string,
     imageChangeInterval: number,
     images: Image[],
-    details: Paragraph,
+    details: Content,
     demoUrl: string,
 }
 
@@ -67,7 +73,7 @@ export type EventsContainer = {
 export type Event = {
     name: string,
     description: string,
-    details: Paragraph,
+    details: Content,
 }
 
 export type SkillsSection = {
@@ -133,7 +139,7 @@ export type Image = {
 }
 
 
-export type Paragraph = {
+export type Content = {
     style?: string,
     content: string
 }

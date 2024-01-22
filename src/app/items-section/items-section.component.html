@@ -6,8 +6,12 @@
         <div class="row pb-5">
             <div class="col-md-1"></div>
             <div class="col-md-2 d-flex justify-content-center" *ngFor="let item of section.items">
-                <img [src]="item?.image?.url" [alt]="item?.image?.alt" [style]="item?.image?.style" placement="bottom"
-                    [ngbTooltip]="item.name" />
+                <a *ngIf="item.image.link" [href]="item.image.link">
+                    <img [src]="item.image.url" [alt]="item.image.alt" [style]="item.image.style" placement="bottom"
+                        [ngbTooltip]="item.name" />
+                </a>
+                <img *ngIf="!item.image.link" [src]="item.image.url" [alt]="item.image.alt" [style]="item.image.style" placement="bottom"
+                    [ngbTooltip]="item.name"/>
             </div>
             <div class="col-md-1"></div>
         </div>

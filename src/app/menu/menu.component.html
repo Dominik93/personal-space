@@ -1,16 +1,11 @@
 <div *ngIf="section">
     <nav class="navbar navbar-expand-sm mb-4 border-bottom" [style]="section.style">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <h1>{{section.title}}</h1>
+            <a class="navbar-brand" href="#" [style]="section.title.style">
+                <h1>{{section.title.content}}</h1>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0" [class]="section.itemsStyle">
+                <ul class="navbar-nav mb-2 mb-lg-0" [class]="section.itemsContainer.itemsStyle">
                     <li class="nav-item" *ngFor="let item of items">
                         <a class="nav-link" [href]="'#'+item.anchor">{{item.label}}</a>
                     </li>

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Paragraph } from '../types';
+import { Content } from '../types';
 
 @Component({
   selector: 'ps-paragraph',
@@ -11,6 +11,6 @@ import { Paragraph } from '../types';
 export class ParagraphComponent {
 
   @Input()
-  paragraph: Paragraph = {content: ""};
+  paragraph: Content = { content: "" };
 
 }

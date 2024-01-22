@@ -1,8 +1,13 @@
 {
+    "title": "Name Surname",
     "menuSection": {
-        "title": "Name Surname",
-        "style": "background-color: beige",
-        "itemsStyle": "ms-auto"
+        "title": {
+            "content": "Name Surname"
+        },
+        "itemsContainer": {
+            "itemsStyle": "ms-auto"
+        },
+        "style": "background-color: beige"
     },
     "sections": {
         "aboutMe": {
