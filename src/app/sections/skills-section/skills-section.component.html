@@ -3,14 +3,14 @@
     <div class="container">
         <ps-header [show]="!!section" [label]="section.label" [id]="section.anchor"></ps-header>
         <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-                <div class="row" style="margin-bottom: 10px;" *ngFor="let skill of section.skills">
-                    <div class="col-md-1">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class="row mb-10" *ngFor="let skill of section.skills">
+                    <div class="col-3 col-md-1">
                         <img [src]="skill?.image?.url" [title]="skill.name" [alt]="skill?.image?.alt"
-                            [style]="skill?.image?.style" [ngbTooltip]="skill.name" placement="left" />
+                            [style]="skill?.image?.style" [ngbTooltip]="skill.name" placement="left"/>
                     </div>
-                    <div class="col-md-11">
+                    <div class="col-9 col-md-11">
                         <br>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar"
@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-1"></div>
+            <div class="col-1"></div>
         </div>
     </div>
     <ps-space></ps-space>

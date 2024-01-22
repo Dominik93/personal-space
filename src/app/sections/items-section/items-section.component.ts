@@ -14,13 +14,18 @@ import { SpaceComponent } from '../../components/space/space.component';
 })
 export class ItemsSectionComponent {
 
+  readonly MAX_SIZE: number = 5;
+
   @Input() section?: ItemsSection;
 
-  padding: any[] = [];
+  padding: string = "col-1";
+
+  size: string = "col-2";
 
   ngOnInit(): void {
-    const items = this.section?.items.length ?? 0;
-    const emptyBlocks = 10 - items;
-    this.padding = new Array(Math.floor(emptyBlocks / 2)).fill(0)
+    const itemsCount = this.section?.items.length ?? 0;
+    const emptyBlocks = 10 - itemsCount;
+    this.padding = "col-" + Math.ceil(emptyBlocks / Math.max(itemsCount, 2))
+    this.size = itemsCount > this.MAX_SIZE ? "col-1" : "col-2"
   }
 }

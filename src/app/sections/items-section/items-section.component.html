@@ -4,8 +4,8 @@
     <div class="container">
         <ps-header [show]="!!section" [label]="section.label" [id]="section.anchor"></ps-header>
         <div class="row pb-5">
-            <div class="col-md-1"></div>
-            <div class="col-md-2 d-flex justify-content-center" *ngFor="let item of section.items">
+            <div [class]="padding"></div>
+            <div [class]="size" class="d-flex justify-content-center" *ngFor="let item of section.items">
                 <a *ngIf="item.image.link" [href]="item.image.link">
                     <img [src]="item.image.url" [alt]="item.image.alt" [style]="item.image.style" placement="bottom"
                         [ngbTooltip]="item.name" />
@@ -13,7 +13,7 @@
                 <img *ngIf="!item.image.link" [src]="item.image.url" [alt]="item.image.alt" [style]="item.image.style" placement="bottom"
                     [ngbTooltip]="item.name"/>
             </div>
-            <div class="col-md-1"></div>
+            <div [class]="padding"></div>
         </div>
     </div>
 
