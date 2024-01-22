@@ -61,6 +61,7 @@ export type Project = {
     images: Image[],
     details: Content,
     demoUrl: string,
+    sourceCode: string,
 }
 
 export type TimelineSection = {

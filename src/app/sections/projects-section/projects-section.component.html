@@ -20,6 +20,7 @@
                                 <h1>{{project.name}}</h1>
                                 <ps-paragraph [paragraph]="project.description"></ps-paragraph>
                                 <ps-paragraph [paragraph]="project.details"></ps-paragraph>
+                                <a *ngIf="project.sourceCode" [href]="project.sourceCode">Source code</a> : 
                                 <a *ngIf="project.demoUrl" [href]="project.demoUrl">Demo</a>
                             </div>
                             <div class="col-md-1"></div>
