@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { MenuSection } from '../types';
+import { MenuSection } from '../../types';
 
 export type Item = {
   show: boolean;

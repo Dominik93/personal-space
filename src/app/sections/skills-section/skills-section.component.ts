@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { SkillsSection } from '../types';
-import { HeaderComponent } from '../header/header.component';
-import { SpaceComponent } from '../space/space.component';
+import { SkillsSection } from '../../types';
+import { HeaderComponent } from '../../components/header/header.component';
+import { SpaceComponent } from '../../components/space/space.component';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({

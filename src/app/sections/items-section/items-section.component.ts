@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
-import { ItemsSection } from '../types';
+import { HeaderComponent } from '../../components/header/header.component';
+import { ItemsSection } from '../../types';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
-import { SpaceComponent } from '../space/space.component';
+import { SpaceComponent } from '../../components/space/space.component';
 
 @Component({
   selector: 'ps-items-section',

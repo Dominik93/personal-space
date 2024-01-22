@@ -4,14 +4,14 @@ import { RouterOutlet } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigurationService } from './configuration.service';
 import { Configuration } from './types';
-import { HeaderComponent } from './header/header.component';
-import { ProjectsSectionComponent } from './projects-section/projects-section.component';
-import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
-import { SkillsSectionComponent } from './skills-section/skills-section.component';
-import { Item, MenuComponent } from './menu/menu.component';
-import { TimelineSectionComponent } from './timeline-section/timeline-section.component';
-import { ItemsSectionComponent } from './items-section/items-section.component';
-import { SpaceComponent } from './space/space.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ProjectsSectionComponent } from './sections/projects-section/projects-section.component';
+import { AboutMeSectionComponent } from './sections/about-me-section/about-me-section.component';
+import { SkillsSectionComponent } from './sections/skills-section/skills-section.component';
+import { Item, MenuComponent } from './sections/menu/menu.component';
+import { TimelineSectionComponent } from './sections/timeline-section/timeline-section.component';
+import { ItemsSectionComponent } from './sections/items-section/items-section.component';
+import { SpaceComponent } from './components/space/space.component';
 import { Title } from '@angular/platform-browser';
 
 export type SectionComponent = {

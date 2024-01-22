@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Content } from '../types';
+import { Content } from '../../types';
 
 @Component({
   selector: 'ps-paragraph',

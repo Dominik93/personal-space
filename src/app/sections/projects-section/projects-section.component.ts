@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
-import { Image, Project, ProjectsSection } from '../types';
+import { HeaderComponent } from '../../components/header/header.component';
+import { Image, Project, ProjectsSection } from '../../types';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { Subscriber, Subscription, interval } from 'rxjs';
-import { SpaceComponent } from '../space/space.component';
-import { ParagraphComponent } from '../paragraph/paragraph.component';
+import { SpaceComponent } from '../../components/space/space.component';
+import { ParagraphComponent } from '../../components/paragraph/paragraph.component';
 
 @Component({
   selector: 'ps-projects-section',
