@@ -1,9 +1,16 @@
+export type Section = {
+    type: string,
+    grid: Grid,
+    style: string,
+    label: string,
+    anchor: string,
+}
+
+
 export type Configuration = {
     title: string,
-    menuSection: MenuSection,
-    intro?: Intro,
     layout: Layout,
-    sections: any
+    sections: any,
 }
 
 export type Layout = {
@@ -11,14 +18,23 @@ export type Layout = {
     leftBorderStyle?: string
 }
 
-export type MenuSection = {
-    title: Content,
+export type Grid = {
+    column: string,
     style: string,
+}
+
+export type MenuSection = Section & {
+    title: Content,
     itemsContainer: MenuItemContainer,
 }
 
 export type MenuItemContainer = {
+    items: MenuItem[],
     itemsStyle: string,
+}
+export type MenuItem = {
+    label: string,
+    anchor: string,
 }
 
 
@@ -28,11 +44,7 @@ export type Intro = {
     description: string
 }
 
-export type AboutMeSection = {
-    type: string,
-    style: string,
-    label: string,
-    anchor: string,
+export type AboutMeSection = Section & {
     image: Image,
     socialMediaStyle: string,
     description: Content,
@@ -45,11 +57,7 @@ export type SocialMedia = {
     style: string
 }
 
-export type ProjectsSection = {
-    type: string,
-    style: string,
-    label: string,
-    anchor: string,
+export type ProjectsSection = Section & {
     additionalInfo: string,
     projects: Project[],
 }
@@ -64,11 +72,7 @@ export type Project = {
     sourceCode: string,
 }
 
-export type TimelineSection = {
-    type: string,
-    style: string,
-    label: string,
-    anchor: string,
+export type TimelineSection = Section & {
     eventsContainer: EventsContainer,
 }
 
@@ -84,11 +88,7 @@ export type Event = {
     details: Content,
 }
 
-export type SkillsSection = {
-    type: string,
-    style: string,
-    label: string,
-    anchor: string,
+export type SkillsSection = Section & {
     skills: Skill[]
 }
 export type Skill = {
@@ -99,12 +99,7 @@ export type Skill = {
 }
 
 
-export type ItemsSection = {
-    type: string,
-    showInMenu: boolean,
-    style: string,
-    label: string,
-    anchor: string,
+export type ItemsSection = Section & {
     items: Item[],
 }
 export type Item = {
@@ -114,10 +109,7 @@ export type Item = {
 }
 
 
-export type ServicesSection = {
-    type: string,
-    style: string,
-    label: string
+export type ServicesSection = Section & {
     services: Service[]
 }
 export type Service = {
@@ -127,9 +119,7 @@ export type Service = {
 }
 
 
-export type ReferencesSection = {
-    label: string
-    style: string,
+export type ReferencesSection = Section & {
     references: Reference[]
 }
 export type Reference = {

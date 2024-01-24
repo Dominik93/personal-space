@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigurationService } from './configuration.service';
-import { Configuration } from './types';
+import { Configuration, Grid } from './types';
 import { HeaderComponent } from './components/header/header.component';
 import { ProjectsSectionComponent } from './sections/projects-section/projects-section.component';
 import { AboutMeSectionComponent } from './sections/about-me-section/about-me-section.component';
@@ -17,6 +17,7 @@ import { Title } from '@angular/platform-browser';
 export type SectionComponent = {
   type: any;
   inputs: any;
+  grid: Grid;
 }
 
 @Component({
@@ -45,17 +46,8 @@ export class AppComponent implements OnInit {
     layout: {
       type: 'SIMPLE'
     },
-    menuSection: {
-      title: { content: "" },
-      itemsContainer: {
-        itemsStyle: "ms-auto"
-      },
-      style: ""
-    },
     sections: []
   }
-
-  items: Item[] = [];
 
   constructor(
     @Inject("ConfigurationService") private configurationService: ConfigurationService,
@@ -70,20 +62,15 @@ export class AppComponent implements OnInit {
         Object.keys(this.configuration.sections).forEach(key => {
           const section = this.configuration.sections[key];
           const type = this.toType(section);
-          if (type) this.components.push({ type: type, inputs: { section: section } });
-          if(section.showInMenu) {
-            this.items.push({
-              label: section?.label,
-              anchor: section?.anchor
-            });
-          }
+          if (type) this.components.push({ type: type, inputs: { section: section }, grid: section.grid });
         })
-
       });
   }
 
   private toType(section: any) {
     switch (section.type) {
+      case 'MENU': 
+        return MenuComponent;
       case 'ABOUT_ME':
         return AboutMeSectionComponent;
       case 'PROJECTS':

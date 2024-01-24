@@ -17,6 +17,5 @@ export type Item = {
 export class MenuComponent {
 
   @Input() section?: MenuSection;
-  @Input() items: Item[] = [];
 
 }

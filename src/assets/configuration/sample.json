@@ -1,21 +1,39 @@
 {
     "title": "Name Surname",
     "layout": {
-      "type": "SIMPLE" 
-    },
-    "menuSection": {
-        "title": {
-            "content": "Name Surname"
-        },
-        "itemsContainer": {
-            "itemsStyle": "ms-auto"
-        },
-        "style": "background-color: beige"
+        "type": "SIMPLE",
+        "leftBorderStyle": "background-color: black"
     },
     "sections": {
+        "menuSection": {
+            "type": "MENU",
+            "grid": {
+                "column": "col-11",
+                "style": ""
+            },
+            "style": "background-color: beige",
+            "label": "Menu",
+            "anchor": "MENU",
+            "title": {
+                "content": "Name Surname"
+            },
+            "itemsContainer": {
+                "itemsStyle": "ms-auto",
+                "items": [
+                    {"label": "About me", "anchor": "aboutme"},
+                    {"label": "Items", "anchor": "items"},
+                    {"label": "Skills", "anchor": "skills"},
+                    {"label": "My work", "anchor": "projects"},
+                    {"label": "Timelaps", "anchor": "timelaps"}
+                ]
+            }
+        },
         "aboutMe": {
             "type": "ABOUT_ME",
-            "showInMenu": true,
+            "grid": {
+                "column": "col-11",
+                "style": ""
+            },
             "style": "",
             "label": "About me",
             "anchor": "aboutme",
@@ -52,7 +70,10 @@
         },
         "itemSection": {
             "type": "ITEMS",
-            "showInMenu": true,
+            "grid": {
+                "column": "col-11",
+                "style": "background-color: beige"
+            },
             "style": "background-color: beige",
             "label": "Items",
             "anchor": "items",
@@ -106,7 +127,10 @@
         },
         "skillsSection": {
             "type": "SKILLS",
-            "showInMenu": true,
+            "grid": {
+                "column": "col-11",
+                "style": ""
+            },
             "style": "",
             "label": "Skills",
             "anchor": "skills",
@@ -165,7 +189,10 @@
         },
         "projects": {
             "type": "PROJECTS",
-            "showInMenu": true,
+            "grid": {
+                "column": "col-11",
+                "style": "background-color: beige"
+            },
             "style": "background-color: beige",
             "label": "My work",
             "anchor": "projects",
@@ -279,7 +306,10 @@
         },
         "timeline": {
             "type": "TIMELINE",
-            "showInMenu": true,
+            "grid": {
+                "column": "col-11",
+                "style": "background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)"
+            },
             "style": "color:white; background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)",
             "label": "Timelaps",
             "anchor": "timelaps",
