@@ -322,6 +322,7 @@
                     {
                         "name": "Event One",
                         "description": "Event One short descritpion",
+                        "subEvents":[],
                         "details": {
                             "content": "Lorem ipsum dolor sit amet,consectetur adipiscing elit.<br><br> Aenean auctor mauris at neque efficitur, ac porta purus fringilla. Vestibulum tincidunt iaculis facilisis. Fusce mollis ante sed sodales auctor. Vestibulum sit amet dictum dolor. Sed eu mauris vel augue vestibulum congue vel vel orci. Aliquam non ipsum ante. Fusce at eleifend orci. "
                         }
@@ -329,6 +330,7 @@
                     {
                         "name": "Event Two",
                         "description": "Event Two short descritpion",
+                        "subEvents":[],
                         "details": {
                             "content": "Donec eu volutpat mi, et iaculis massa. Duis efficitur euismod viverra. Aliquam tincidunt ac urna ut consequat. Cras vel leo ipsum. Aliquam cursus augue venenatis risus vulputate sagittis. Phasellus dictum lectus vitae justo iaculis pellentesque. Duis felis mauris, tristique ut pharetra eu, dignissim quis quam. Vivamus velit risus, aliquet egestas dui eget, sollicitudin hendrerit urna. Aenean at tortor sit amet metus rutrum malesuada nec at lorem. Morbi et tempus dolor. Nunc vestibulum mauris eget lorem varius dapibus. Proin ullamcorper risus varius orci lacinia accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis magna sit amet justo ultricies, vitae lobortis lacus lobortis. Vivamus semper tempus mi, ac euismod erat tincidunt eu. "
                         }
@@ -336,6 +338,7 @@
                     {
                         "name": "Event Three",
                         "description": "Event Three short descritpion",
+                        "subEvents":[],
                         "details": {
                             "style": "font-size: x-large",
                             "content": "Sed vitae consequat quam, non auctor velit. Donec ultrices ante lobortis, mollis urna gravida, pharetra massa. Donec tristique molestie velit, sit amet eleifend mauris pellentesque in. In efficitur accumsan turpis, consectetur gravida lorem tincidunt sit amet. Cras scelerisque quam id tellus fringilla, id molestie mauris venenatis. Nulla eget bibendum dolor. Pellentesque ultrices est vel lectus facilisis, eu sagittis dolor convallis. Pellentesque varius dui sit amet dictum commodo. Nam vitae ornare erat. Mauris sollicitudin bibendum semper. "
