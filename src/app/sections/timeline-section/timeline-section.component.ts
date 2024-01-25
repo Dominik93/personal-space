@@ -20,17 +20,34 @@ export class TimelineSectionComponent implements OnInit {
   selectedEvent: Event = {
     name: "",
     description: "",
+    subEvents: [],
+    details: { content: "" }
+  };
+
+  selectedSubEvent: Event = {
+    name: "",
+    description: "",
+    subEvents: [],
     details: { content: "" }
   };
 
   ngOnInit(): void {
     if (this.section) {
       this.selectedEvent = this.section.eventsContainer.events[0];
+      if (this.selectedEvent.subEvents.length > 0) {
+        this.selectedSubEvent = this.selectedEvent.subEvents[0]
+      }
     }
   }
 
-  onClick($event: MouseEvent, event: Event) {
+  onEventClick($event: MouseEvent, event: Event) {
     this.selectedEvent = event;
+    if (this.selectedEvent.subEvents.length > 0) {
+      this.selectedSubEvent = this.selectedEvent.subEvents[0]
+    }
   }
 
+  onSubEventClick($event: MouseEvent, event: Event) {
+    this.selectedSubEvent = event;
+  }
 }

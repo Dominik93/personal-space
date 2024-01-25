@@ -8,19 +8,43 @@
                 <div class="list-group list-group-checkable d-grid gap-2 border-0">
                     <div *ngFor="let event of section.eventsContainer.events">
                         <label class="list-group-item rounded-3 py-3" *ngIf="event.name === selectedEvent?.name"
-                            [style]="section.eventsContainer.selectedStyle" (click)="onClick($event, event)"
+                            [style]="section.eventsContainer.selectedStyle" (click)="onEventClick($event, event)"
                             [hover-style]="section.eventsContainer.hoverStyle">
                             {{event.name}}
-                            <span class="d-block small opacity-50">{{event.description}}</span> </label>
+                            <span class="d-block small opacity-50">{{event.description}}</span>
+                        </label>
                         <label class="list-group-item rounded-3 py-3" *ngIf="event.name !== selectedEvent?.name"
-                            (click)="onClick($event, event)" [hover-style]="section.eventsContainer.hoverStyle">
+                            (click)="onEventClick($event, event)" [hover-style]="section.eventsContainer.hoverStyle">
                             {{event.name}}
-                            <span class="d-block small opacity-50">{{event.description}}</span> </label>
+                            <span class="d-block small opacity-50">{{event.description}}</span>
+                        </label>
                     </div>
                 </div>
             </div>
             <div class="col-md-7">
-                <ps-paragraph [paragraph]="selectedEvent.details"></ps-paragraph>
+                <div *ngIf="selectedEvent.subEvents.length > 0">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item" *ngFor="let subEvent of selectedEvent.subEvents">
+                            <a class="nav-link" *ngIf="subEvent.name === selectedSubEvent?.name"
+                                style="color: rgb(33, 37, 41)"
+                                [style]="section.eventsContainer.selectedStyle"
+                                (click)="onSubEventClick($event, subEvent)">
+                                {{subEvent.name}}
+                            </a>
+                            <a class="nav-link" *ngIf="subEvent.name !== selectedSubEvent?.name"
+                            style="color: rgb(33, 37, 41)"
+                                [hover-style]="section.eventsContainer.hoverStyle"
+                                (click)="onSubEventClick($event, subEvent)">
+                                {{subEvent.name}}
+                            </a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ps-paragraph [paragraph]="selectedSubEvent.details"></ps-paragraph>
+                </div>
+                <div *ngIf="selectedEvent.subEvents.length == 0">
+                    <ps-paragraph [paragraph]="selectedEvent.details"></ps-paragraph>
+                </div>
             </div>
             <div class="col-md-1"></div>
         </div>

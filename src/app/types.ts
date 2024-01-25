@@ -84,6 +84,7 @@ export type EventsContainer = {
 
 export type Event = {
     name: string,
+    subEvents: Event[],
     description: string,
     details: Content,
 }
