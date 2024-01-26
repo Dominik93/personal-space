@@ -1,21 +1,3 @@
-
-<div *ngIf="configuration.layout.type === 'SIMPLE'">
-
-  <div *ngFor="let component of components">
-    <ng-container *ngComponentOutlet="component.type; inputs: component.inputs;"></ng-container>
-  </div>
-
-</div>
-
-<div *ngIf="configuration.layout.type === 'BORDERED'" style="padding: 0 12px;">
-  <div *ngFor="let component of components">
-    <div class="row">
-      <div class="col-1" [style]="configuration.layout.leftBorderStyle">
-      </div>
-      <div [class]="component.grid.column" [style]="component.grid.style">
-        <ng-container *ngComponentOutlet="component.type; inputs: component.inputs;"></ng-container>
-      </div>
-    </div>
-  </div>
-
+<div *ngFor="let component of components" [style]="component.grid.style">
+  <ng-container *ngComponentOutlet="component.type; inputs: component.inputs;"></ng-container>
 </div>

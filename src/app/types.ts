@@ -6,16 +6,17 @@ export type Section = {
     anchor: string,
 }
 
+export type RowSection = Section & {
+    sections : any,
+}
+
+export type ColumnSection = Section & {
+    sections : any,
+}
 
 export type Configuration = {
     title: string,
-    layout: Layout,
     sections: any,
-}
-
-export type Layout = {
-    type: 'SIMPLE' | 'BORDERED',
-    leftBorderStyle?: string
 }
 
 export type Grid = {

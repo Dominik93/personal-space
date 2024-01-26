@@ -3,22 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigurationService } from './configuration.service';
-import { Configuration, Grid } from './types';
+import { Configuration } from './types';
 import { HeaderComponent } from './components/header/header.component';
-import { ProjectsSectionComponent } from './sections/projects-section/projects-section.component';
-import { AboutMeSectionComponent } from './sections/about-me-section/about-me-section.component';
-import { SkillsSectionComponent } from './sections/skills-section/skills-section.component';
-import { Item, MenuComponent } from './sections/menu/menu.component';
-import { TimelineSectionComponent } from './sections/timeline-section/timeline-section.component';
-import { ItemsSectionComponent } from './sections/items-section/items-section.component';
+import { MenuComponent } from './sections/menu/menu.component';
 import { SpaceComponent } from './components/space/space.component';
 import { Title } from '@angular/platform-browser';
+import { ComponentMapper, SectionComponent } from './component-mapper';
 
-export type SectionComponent = {
-  type: any;
-  inputs: any;
-  grid: Grid;
-}
 
 @Component({
   selector: 'app-root',
@@ -43,9 +34,6 @@ export class AppComponent implements OnInit {
 
   configuration: Configuration = {
     title: "",
-    layout: {
-      type: 'SIMPLE'
-    },
     sections: []
   }
 
@@ -59,31 +47,9 @@ export class AppComponent implements OnInit {
       .subscribe(value => {
         this.title.setTitle(value.title);
         this.configuration = value;
-        Object.keys(this.configuration.sections).forEach(key => {
-          const section = this.configuration.sections[key];
-          const type = this.toType(section);
-          if (type) this.components.push({ type: type, inputs: { section: section }, grid: section.grid });
-        })
+        this.components = ComponentMapper.toComponents(this.configuration.sections);
       });
   }
 
-  private toType(section: any) {
-    switch (section.type) {
-      case 'MENU': 
-        return MenuComponent;
-      case 'ABOUT_ME':
-        return AboutMeSectionComponent;
-      case 'PROJECTS':
-        return ProjectsSectionComponent;
-      case 'TIMELINE':
-        return TimelineSectionComponent;
-      case 'SKILLS':
-        return SkillsSectionComponent;
-      case 'ITEMS':
-        return ItemsSectionComponent;
-      default:
-        return;
-    }
-  }
 
 }
