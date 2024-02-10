@@ -1,6 +1,7 @@
-import { DefaultConfigurationService } from "../app/default-configuration.service";
+import { DefaultConfigurationService } from "../app/browser/default-configuration.service";
 
 export const environment = {
 
-    configurationService: DefaultConfigurationService
+    configurationService: DefaultConfigurationService,
+    administration: false
 };

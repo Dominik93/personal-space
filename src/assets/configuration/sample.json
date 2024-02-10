@@ -2,6 +2,7 @@
     "title": "Name Surname",
     "sections": {
         "menuRow": {
+            "id": "1",
             "type": "ROW",
             "grid": {
                 "column": "",
@@ -9,6 +10,7 @@
             },
             "sections": {
                 "blankColumn": {
+                    "id": "2",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-1",
@@ -19,11 +21,13 @@
                     "anchor": "",
                     "sections": {
                         "blank": {
+                            "id": "3",
                             "type": "BLANK"
                         }
                     }
                 },
                 "menuColumn": {
+                    "id": "4",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-11",
@@ -34,6 +38,7 @@
                     "anchor": "",
                     "sections": {
                         "menu": {
+                            "id": "5",
                             "type": "MENU",
                             "style": "background-color: beige",
                             "label": "Menu",
@@ -72,6 +77,7 @@
             }
         },
         "aboutMeRow": {
+            "id": "6",
             "type": "ROW",
             "grid": {
                 "column": "",
@@ -79,6 +85,7 @@
             },
             "sections": {
                 "blankColumn": {
+                    "id": "7",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-1",
@@ -89,11 +96,13 @@
                     "anchor": "",
                     "sections": {
                         "blank": {
+                            "id": "8",
                             "type": "BLANK"
                         }
                     }
                 },
                 "aboutMeColumn": {
+                    "id": "9",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-11",
@@ -104,6 +113,7 @@
                     "anchor": "",
                     "sections": {
                         "aboutMe": {
+                            "id": "10",
                             "type": "ABOUT_ME",
                             "grid": {
                                 "column": "col-11",
@@ -148,6 +158,7 @@
             }
         },
         "itemsRow": {
+            "id": "11",
             "type": "ROW",
             "grid": {
                 "column": "",
@@ -155,6 +166,7 @@
             },
             "sections": {
                 "blankColumn": {
+                    "id": "12",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-1",
@@ -165,11 +177,13 @@
                     "anchor": "",
                     "sections": {
                         "blank": {
+                            "id": "13",
                             "type": "BLANK"
                         }
                     }
                 },
                 "itemsColumn": {
+                    "id": "14",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-11",
@@ -180,6 +194,7 @@
                     "anchor": "",
                     "sections": {
                         "itemSection": {
+                            "id": "15",
                             "type": "ITEMS",
                             "grid": {
                                 "column": "col-11",
@@ -241,6 +256,7 @@
             }
         },
         "skillsRow": {
+            "id": "16",
             "type": "ROW",
             "grid": {
                 "column": "",
@@ -248,6 +264,7 @@
             },
             "sections": {
                 "blankColumn": {
+                    "id": "17",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-1",
@@ -258,11 +275,13 @@
                     "anchor": "",
                     "sections": {
                         "blank": {
+                            "id": "18",
                             "type": "BLANK"
                         }
                     }
                 },
                 "skillsColumn": {
+                    "id": "19",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-11",
@@ -273,6 +292,7 @@
                     "anchor": "",
                     "sections": {
                         "skillsSection": {
+                            "id": "20",
                             "type": "SKILLS",
                             "grid": {
                                 "column": "col-11",
@@ -339,6 +359,7 @@
             }
         },
         "projectsRow": {
+            "id": "21",
             "type": "ROW",
             "grid": {
                 "column": "",
@@ -346,6 +367,7 @@
             },
             "sections": {
                 "blankColumn": {
+                    "id": "22",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-1",
@@ -356,11 +378,13 @@
                     "anchor": "",
                     "sections": {
                         "blank": {
+                            "id": "23",
                             "type": "BLANK"
                         }
                     }
                 },
                 "projectsColumn": {
+                    "id": "24",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-11",
@@ -371,6 +395,7 @@
                     "anchor": "",
                     "sections": {
                         "projects": {
+                            "id": "25",
                             "type": "PROJECTS",
                             "grid": {
                                 "column": "col-11",
@@ -492,6 +517,7 @@
             }
         },
         "timelineRow": {
+            "id": "26",
             "type": "ROW",
             "grid": {
                 "column": "",
@@ -499,6 +525,7 @@
             },
             "sections": {
                 "blankColumn": {
+                    "id": "27",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-1",
@@ -509,11 +536,13 @@
                     "anchor": "",
                     "sections": {
                         "blank": {
+                            "id": "28",
                             "type": "BLANK"
                         }
                     }
                 },
                 "timelineColumn": {
+                    "id": "29",
                     "type": "COLUMN",
                     "grid": {
                         "column": "col-11",
@@ -524,6 +553,7 @@
                     "anchor": "",
                     "sections": {
                         "timeline": {
+                            "id": "30",
                             "type": "TIMELINE",
                             "grid": {
                                 "column": "col-11",

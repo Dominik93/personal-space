@@ -1,0 +1,15 @@
+.carousel-control-prev-icon {
+    background-image: url('./../../../../assets/keyboard_arrow_left.svg')
+}
+
+.carousel-control-next-icon {
+    background-image: url('./../../../../assets/keyboard_arrow_right.svg')
+}
+
+.carousel {
+    .carousel-indicators {
+        button {
+            background-color: black;
+        }
+    }
+}

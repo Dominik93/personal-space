@@ -1,4 +1,5 @@
 export type Section = {
+    id: string,
     type: string,
     grid: Grid,
     style: string,
@@ -15,6 +16,7 @@ export type ColumnSection = Section & {
 }
 
 export type Configuration = {
+    id: string,
     title: string,
     sections: any,
 }

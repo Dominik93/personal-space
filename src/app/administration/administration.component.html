@@ -1,0 +1,25 @@
+<div class="row" style="padding: 0 12px">
+    <div class="col-3" style="background-color: gainsboro;">
+        <button class="btn btn-light" (click)="onPreviewClick()">Preview</button>
+        <ul>
+            <li (click)="onCanvasSelection()" [style.font-weight]="selected ? 'bold' : ''">Canvas</li>
+            <ul>
+                <ps-configurable-section [section]="section.value"
+                    *ngFor="let section of configuration.sections | keyvalue: originalOrder"></ps-configurable-section>
+                <li (click)="onAddSectionClick()">Add Section</li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="col-9" style="height: 100vh">
+        <br>
+        <ps-section-values [section]="selectedSection" (changed)=onChanged($event) ></ps-section-values>
+        <div>
+            <span>JSON representation:</span>
+            <br>
+            {{selectedSection | json }}
+        </div>
+    </div>
+</div>
+
+<ps-sections-visialization *ngIf="preview" [configuration]="configuration"></ps-sections-visialization>

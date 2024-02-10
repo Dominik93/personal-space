@@ -1,7 +1,8 @@
-import { InMemoryConfigurationService } from "../app/in-memory-configuration.service";
+import { InMemoryConfigurationService } from "../app/browser/in-memory-configuration.service";
 
 export const environment = {
 
-    configurationService: InMemoryConfigurationService
+    configurationService: InMemoryConfigurationService,
+    administration: true
 
 };

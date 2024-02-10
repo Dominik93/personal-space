@@ -1,0 +1,8 @@
+<li (click)="onSectionClick()" [style.font-weight]="selected ? 'bold' : ''">{{section.type}}</li>
+<ul>
+    <ps-configurable-section [section]="section.value"
+        *ngFor="let section of section.sections | keyvalue"></ps-configurable-section>
+    <li (click)="onAddSectionClick()">Add Section</li>
+</ul>
+
+
