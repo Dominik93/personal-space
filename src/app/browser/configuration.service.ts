@@ -3,6 +3,6 @@ import { Observable } from 'rxjs';
 
 export interface ConfigurationService {
 
-    getConfiguration: () => Observable<Configuration>;
+    getConfiguration: (lang: string) => Observable<Configuration>;
 
 }

@@ -10,7 +10,7 @@ export class DefaultConfigurationService implements ConfigurationService {
 
   constructor() { }
 
-  getConfiguration(): Observable<Configuration> {
+  getConfiguration(lang: string): Observable<Configuration> {
     const configuration: Configuration = {
       id: Date.now().toString(),
       title: "",

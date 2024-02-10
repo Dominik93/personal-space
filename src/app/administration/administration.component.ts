@@ -7,6 +7,7 @@ import { SectionValuesComponent } from './section-values/section-values.componen
 import { ComponentMapper } from './component-mapper';
 import { ConfigurationService } from '../browser/configuration.service';
 import { SectionsVisializationComponent } from '../browser/sections-visialization/sections-visialization.component';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'ps-administration',
@@ -30,6 +31,7 @@ export class AdministrationComponent {
   selected: boolean = true;
 
   constructor(private selectedSectionService: SelectedSectionService,
+    private langaugeService: LanguageService,
     @Inject("ConfigurationService") private configurationService: ConfigurationService) {
     selectedSectionService.getSelectedSection().subscribe(value => {
       this.selectedSection = value;
@@ -38,7 +40,7 @@ export class AdministrationComponent {
   }
   
   ngOnInit() {
-    this.configurationService.getConfiguration()
+    this.configurationService.getConfiguration(this.langaugeService.getBrowserLanguage())
       .subscribe(value => {
         this.configuration = value;
       });
