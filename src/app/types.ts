@@ -49,15 +49,16 @@ export type Intro = {
 
 export type AboutMeSection = Section & {
     image: Image,
-    socialMediaStyle: string,
     description: Content,
-    socialMedia: SocialMedia[]
+    linksStyle: string,
+    links: Link[]
 }
-export type SocialMedia = {
+export type Link = {
     name: string,
     icon: string,
     link: string,
-    style: string
+    style: string,
+    downloadable: boolean
 }
 
 export type ProjectsSection = Section & {

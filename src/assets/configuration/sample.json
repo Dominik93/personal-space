@@ -132,25 +132,35 @@
                                 "alt": "My Picture",
                                 "style": "width: 400px; border-radius: 50%;"
                             },
-                            "socialMediaStyle": "display: inline; margin-right: 15px;",
-                            "socialMedia": [
+                            "linksStyle": "display: inline; margin-right: 15px;",
+                            "links": [
                                 {
                                     "name": "GitHub",
                                     "link": "https://github.com/",
                                     "icon": "https://cdn1.iconfinder.com/data/icons/picons-social/57/github_rounded-1024.png",
-                                    "style": "width: 50px;"
+                                    "style": "width: 50px;",
+                                    "downloadbale": false
                                 },
                                 {
                                     "name": "LinkedIn",
                                     "link": "https://www.linkedin.com",
                                     "icon": "https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-1024.png",
-                                    "style": "width: 50px;"
+                                    "style": "width: 50px;",
+                                    "downloadbale": false
                                 },
                                 {
                                     "name": "Mail",
                                     "link": "mailto:name.surname@domain.com",
                                     "icon": "https://cdn4.iconfinder.com/data/icons/miu-black-social-2/60/mail-512.png",
-                                    "style": "width: 50px;"
+                                    "style": "width: 50px;",
+                                    "downloadbale": false
+                                },
+                                {
+                                  "name": "PDF",
+                                  "link": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+                                  "icon": "https://cdn2.iconfinder.com/data/icons/search-outline-24-px/24/files_and_folders_business_and_finance_loupe_CV_curriculum_vitae-1024.png",
+                                  "style": "width: 50px;",
+                                  "downloadbale": true
                                 }
                             ]
                         }

@@ -11,10 +11,14 @@
                         [style]="section.image.style">
                 </div>
                 <div class="col">
-                    <div *ngFor="let socialMedia of section.socialMedia" [style]="section.socialMediaStyle">
-                        <a [href]="socialMedia.link">
-                            <img [src]="socialMedia.icon" class="img-fluid" [alt]="socialMedia.name"
-                                [style]="socialMedia.style">
+                    <div *ngFor="let link of section.links" [style]="section.linksStyle">
+                        <a [href]="link.link" *ngIf="!link.downloadable" target="_blank" rel="noopener noreferrer">
+                            <img [src]="link.icon" class="img-fluid" [alt]="link.name"
+                                [style]="link.style">
+                        </a>
+                        <a [href]="link.link" [download]="link.name" *ngIf="link.downloadable" target="_blank" rel="noopener noreferrer">
+                            <img [src]="link.icon" class="img-fluid" [alt]="link.name"
+                                [style]="link.style">
                         </a>
                     </div>
                 </div>
